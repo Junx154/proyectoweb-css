@@ -126,10 +126,17 @@ body {
 }
 
 .container{
+    padding-right: 15px;
+    padding-left: 15px;
     width: 100%;
     margin: auto; /* ayuda a que la informacion este en el medio o espacioado a la izquierda o derecha para que este centrado */
     z-index: 20; /* es la propiedad que le ordena que el elemento se escriba encima */
     position: relative;
+}
+
+.row{
+    display: flex; /* es un activador (obligatorio) */
+    flex-wrap: wrap;  /* ayuda que el contenido sea adaptable si es que es no hay espacio salta a la siguiente linea */
 }
 
 .centrado{
@@ -165,6 +172,29 @@ body {
     font-family: 'Poppins'; 
 }
 
+@media screen and (max-width: 860px) {
+    .mainbanner{
+        padding: 8em 4em;
+    }
+    .mainbanner__boton{
+        display: block;
+        margin-bottom: 1em;
+    }
+
+    .mainbanner__data{
+            text-align: center;
+            margin: auto;
+    }
+    
+    .mainbanner__titulo{
+        font-size: 2em;
+    
+    }
+    .mainbanner__parrafo{
+        font-size: 1em ;
+    }
+
+}
 
 
 
