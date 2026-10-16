@@ -89,3 +89,82 @@ body {
         flex-direction: column;
     }
 }
+
+
+/* inicio del banner */
+
+.mainbanner{
+    position: relative; /* sirve para colocar imagenes de fondo */
+    padding: 23em 14em ;
+    /* background-color: var(--colorSecundario) ; */
+    background: linear-gradient(to left, yellow,  red); /* combina colores */
+    top: 61px; 
+}
+
+.mainbanner::after{ 
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute; /* sirve para colocar imagenes o texto encima de otros */
+    top: 0;
+    left: 0;
+    background-color: var(--colorSecundario); 
+    mix-blend-mode: color; /* ayuda a que la imagenen sea transparente */
+    opacity: .6;  /* modificar que tan transparente queremos*/
+}
+/* fin del banner */
+
+.mainbanner__img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; /* ayuda a que la imagen no se estire y puedo manipularlo con el padding*/
+    opacity: .2;
+
+}
+
+.container{
+    width: 100%;
+    margin: auto; /* ayuda a que la informacion este en el medio o espacioado a la izquierda o derecha para que este centrado */
+    z-index: 20; /* es la propiedad que le ordena que el elemento se escriba encima */
+    position: relative;
+}
+
+.centrado{
+    display: block;
+    margin: auto;
+}
+
+
+.mainbanner__data{
+    text-align: center; 
+}
+
+.mainbanner__titulo{
+    color: #fff;
+    font-family: 'Poppins'; 
+    font-weight: 600; 
+    font-size: 2.5em;
+}
+
+.mainbanner__parrafo{
+    color:#fff;
+    font-family: 'Poppins';
+    font-size: 1em;
+}
+
+.mainbanner__boton{
+    background-color: var(--colorPrimario); /* fondo del boton*/
+    color: #fff;  /* color de letra */
+    padding: 1em 1em; 
+    border-radius: .8em; /* darle curvas al cuadro del boton */
+    text-decoration: none; /* quitar la linea o decoracion */
+    font-weight: 500;  
+    font-family: 'Poppins'; 
+}
+
+
+
+
