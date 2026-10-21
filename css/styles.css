@@ -8,6 +8,7 @@
     --colorTitulos: #282D31;
     --colorParrafos: #53575A;
     --colorSombras: #282031;
+    --colorBordes: #DFE0E0;
 
 }
 
@@ -78,12 +79,14 @@ body {
         width: 100%;
         padding: 0.5em;
     }
-    .menu__btn-menu{
+
+    .menu__btn-menu {
         display: block;
         color: red;
         font-size: 1em;
     }
-    .menu__enlaces{
+
+    .menu__enlaces {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -93,108 +96,195 @@ body {
 
 /* inicio del banner */
 
-.mainbanner{
-    position: relative; /* sirve para colocar imagenes de fondo */
-    padding: 23em 14em ;
+.mainbanner {
+    position: relative;
+    /* sirve para colocar imagenes de fondo */
+    padding: 23em 14em;
     /* background-color: var(--colorSecundario) ; */
-    background: linear-gradient(to left, yellow,  red); /* combina colores */
-    top: 61px; 
+    background: linear-gradient(to left, yellow, red);
+    /* combina colores */
+    top: 61px;
 }
 
-.mainbanner::after{ 
+.mainbanner::after {
     content: "";
     width: 100%;
     height: 100%;
-    position: absolute; /* sirve para colocar imagenes o texto encima de otros */
+    position: absolute;
+    /* sirve para colocar imagenes o texto encima de otros */
     top: 0;
     left: 0;
-    background-color: var(--colorSecundario); 
-    mix-blend-mode: color; /* ayuda a que la imagenen sea transparente */
-    opacity: .6;  /* modificar que tan transparente queremos*/
+    background-color: var(--colorSecundario);
+    mix-blend-mode: color;
+    /* ayuda a que la imagenen sea transparente */
+    opacity: .6;
+    /* modificar que tan transparente queremos*/
 }
+
 /* fin del banner */
 
-.mainbanner__img{
+.mainbanner__img {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%; 
+    width: 100%;
     height: 100%;
-    object-fit: cover; /* ayuda a que la imagen no se estire y puedo manipularlo con el padding*/
+    object-fit: cover;
+    /* ayuda a que la imagen no se estire y puedo manipularlo con el padding*/
     opacity: .2;
 
 }
 
-.container{
+.container {
     padding-right: 15px;
     padding-left: 15px;
     width: 100%;
-    margin: auto; /* ayuda a que la informacion este en el medio o espacioado a la izquierda o derecha para que este centrado */
-    z-index: 20; /* es la propiedad que le ordena que el elemento se escriba encima */
+    margin: auto;
+    /* ayuda a que la informacion este en el medio o espacioado a la izquierda o derecha para que este centrado */
+    z-index: 20;
+    /* es la propiedad que le ordena que el elemento se escriba encima */
     position: relative;
 }
 
-.row{
-    display: flex; /* es un activador (obligatorio) */
-    flex-wrap: wrap;  /* ayuda que el contenido sea adaptable si es que es no hay espacio salta a la siguiente linea */
+.row {
+    display: flex;
+    /* es un activador (obligatorio) */
+    flex-wrap: wrap;
+    /* ayuda que el contenido sea adaptable si es que es no hay espacio salta a la siguiente linea */
 }
 
-.centrado{
+.centrado {
     display: block;
     margin: auto;
 }
 
 
-.mainbanner__data{
-    text-align: center; 
+.mainbanner__data {
+    text-align: center;
 }
 
-.mainbanner__titulo{
+.mainbanner__titulo {
     color: #fff;
-    font-family: 'Poppins'; 
-    font-weight: 600; 
+    font-family: 'Poppins';
+    font-weight: 600;
     font-size: 2.5em;
 }
 
-.mainbanner__parrafo{
-    color:#fff;
+.mainbanner__parrafo {
+    color: #fff;
     font-family: 'Poppins';
     font-size: 1em;
 }
 
-.mainbanner__boton{
-    background-color: var(--colorPrimario); /* fondo del boton*/
-    color: #fff;  /* color de letra */
-    padding: 1em 1em; 
-    border-radius: .8em; /* darle curvas al cuadro del boton */
-    text-decoration: none; /* quitar la linea o decoracion */
-    font-weight: 500;  
-    font-family: 'Poppins'; 
+.mainbanner__boton {
+    background-color: var(--colorPrimario);
+    /* fondo del boton*/
+    color: #fff;
+    /* color de letra */
+    padding: 1em 1em;
+    border-radius: .8em;
+    /* darle curvas al cuadro del boton */
+    text-decoration: none;
+    /* quitar la linea o decoracion */
+    font-weight: 500;
+    font-family: 'Poppins';
 }
 
 @media screen and (max-width: 860px) {
-    .mainbanner{
+    .mainbanner {
         padding: 8em 4em;
     }
-    .mainbanner__boton{
+
+    .mainbanner__boton {
         display: block;
         margin-bottom: 1em;
     }
 
-    .mainbanner__data{
-            text-align: center;
-            margin: auto;
+    .mainbanner__data {
+        text-align: center;
+        margin: auto;
     }
-    
-    .mainbanner__titulo{
+
+    .mainbanner__titulo {
         font-size: 2em;
-    
+
     }
-    .mainbanner__parrafo{
-        font-size: 1em ;
+
+    .mainbanner__parrafo {
+        font-size: 1em;
     }
 
 }
 
+/* inicio del card*/
+
+.cards__grid {
+    display: grid;
+    /*el grid es el sistema de regillas (ACTIVARDOR)*/
+    gap: 1.5em;
+    /*sirve para separar las imagenes (no esten juntas)*/
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    /*CREA COLUNNAS*/
+}
 
 
+.card {
+    background-color: #fff;
+    border-radius: 1.5em;
+    border: 3px solid var(--colorBordes);
+    box-shadow: 0 1PX 4PX var(--colorSombras);
+}
+
+
+.card__img img {
+    max-width: 100%;
+    border-radius: 1em 1em 0 0;
+}
+
+
+.card__content{
+    padding: 1em;
+}
+
+.card__content a{
+    text-decoration: none;
+}
+
+.card__title{
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 1em;
+    text-align: center;
+    color: var(--colorTitulos);
+    text-transform: uppercase; 
+    
+}
+
+.card__info{
+    background-color: var(--colorPrimario);
+    color: #fff;
+    font-size: 1em;
+    padding: 1em;
+    display: block;
+    margin-top: 1.5em;
+    border-radius: 1em;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-weight: 600;
+    transition: background-color .5s ease-in-out;
+}
+
+
+.card__info:hover{
+    background-color: var(--colorSecundario);
+    color: #DFE0E0;
+}
+
+.card__titulo{
+    text-align: center;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 2em;
+}
+/*fin de card */
