@@ -288,3 +288,40 @@ body {
     font-size: 2em;
 }
 /*fin de card */
+
+
+/*inicio de footer */
+
+footer{
+    background-color: var(--colorSombras);
+    color: #fff;
+    padding: 1.5em 0;
+    font-family: 'Poppins';
+    font-weight: 400;
+}
+
+.iconos-pie{
+    font-size: 2em;
+}
+
+.iconos-pie:hover{
+    color: #EC111A;
+}
+
+.pie, .info{
+    font-family: 'Poppins';
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.derechos{
+    background-color: var(--colorParrafos);
+    color: #fff;
+    font-family: 'Poppins';
+    padding: 0.5em;
+}
+
+
+
+
+
